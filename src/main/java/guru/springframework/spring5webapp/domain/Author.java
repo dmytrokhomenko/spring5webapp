@@ -2,8 +2,6 @@ package guru.springframework.spring5webapp.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,11 +18,11 @@ public class Author {
     @Column(columnDefinition = "binary(16)")
     private UUID id;
     private String firstName;
-    private String secondName;
+    private String lastName;
 
-    public Author(String firstName, String secondName) {
+    public Author(String firstName, String lastName) {
         this.firstName = firstName;
-        this.secondName = secondName;
+        this.lastName = lastName;
     }
 
     @Override
